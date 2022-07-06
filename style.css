@@ -1,0 +1,54 @@
+table {
+    text-align: left;
+    
+}
+
+table, th, td {
+    border: 1px solid black;
+
+}
+
+.grid-container {
+    display: grid; 
+    width: 1000px;
+    height: 200px;
+    gap: 10px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto;
+    grid-auto-rows: 50px;
+    align-items: center;
+    justify-self: auto;
+    background-color: aqua;
+
+   grid-template-areas: 'one two three';
+   /* grid-template: repeat(3, 1fr) / repeat(4, 1fr); */
+
+}
+
+.item {
+    border: 3px solid black;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+
+/* row start / col start / row end or span / col end or span; */
+.one {
+/* grid-area: 1 / 1 / span 1 / span 1; */
+grid-area: one;
+background-color: green;
+}
+
+.two {
+grid-area: two;
+background-color: green;
+}
+
+.three {
+/* grid-row: auto;
+grid-column: auto; */
+grid-area: three;
+background-color: green;
+}
+
+
